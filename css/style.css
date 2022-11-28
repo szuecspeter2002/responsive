@@ -1,4 +1,59 @@
 body {
-    background: #466368;
-    background: radial-gradient(pink, purple, red);
+    margin: 15px;
+    background: fixed linear-gradient(blueviolet, purple, hotpink, pink, lightpink);
+}
+.sidebar, .content, .header, .nav, .footer, .aside {
+    padding: 50px;
+    border-radius: 10px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: dimgray;
+}
+.content {
+    grid-area: content;
+    background-color: antiquewhite;
+}
+.header {
+    grid-area: header;
+    background-color: aquamarine;
+}
+.footer {
+    grid-area: footer;
+    background-color: hotpink;
+}
+.aside {
+    grid-area: aside;
+    background-color: azure;
+}
+.nav {
+    grid-area: nav;
+    background-color: blueviolet;
+}
+.wrapper {
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 13em 13em 13em;
+    grid-template-areas: 
+    "header header ......."
+    "nav content aside"
+    "nav content sidebar"
+    "footer footer footer";
+}
+@media all and (max-width:1200px) {
+    body {
+        background: dimgray linear-gradient(purple,hotpink,pink) fixed;
+    }
+}
+@media all and (max-width:800px) {
+    body {
+        background: dimgray linear-gradient(hotpink, pink) fixed;
+    }
+}
+@media all and (max-width:800px) {
+    body {
+        background: dimgray linear-gradient(purple,hotpink) fixed;
+    }
 }
